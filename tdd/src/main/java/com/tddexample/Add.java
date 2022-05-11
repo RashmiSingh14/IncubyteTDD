@@ -9,9 +9,9 @@ public class Add {
 		}
 		String num[] = numbers.split("\\s+");
 		for (String x : num) {
-			if(Integer.parseInt(x)< 0) {
-				return Integer.parseInt(x);
-			}
+//			if(Integer.parseInt(x)< 0) {
+//				return Integer.parseInt(x);
+//			}
 			sum += Integer.parseInt(x);
 		}
 		System.out.println("Numbers "+numbers);
