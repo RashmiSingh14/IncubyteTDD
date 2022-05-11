@@ -42,4 +42,18 @@ public class AddTest {
 		int actual = addnum.addnumbers("1\n2,3");
 		assertEquals("The method should handle new line in between numbers", expected, actual);
 	}
+	
+	@Test
+	public void testDiffDelimiters() {
+		int expected = 3;
+		int actual = addnum.addnumbers("//;\\n1;2");
+		assertEquals("The method should support different delimiters", expected, actual);
+	}
+	
+	@Test
+	public void testNegativeNum() {
+		int expected = -3;
+		int actual = addnum.addnumbers("-1,-2");
+		assertEquals("Negatives not allowed ", expected, actual);
+	}
 }
