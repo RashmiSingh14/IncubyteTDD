@@ -1,8 +1,8 @@
 package com.tddexample;
 
-import static org.junit.Assert.*;
-import static org.junit.Assert.assertEquals;
 //import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
+import static org.junit.Assert.assertThrows;
 
 import org.junit.Test;
 
@@ -52,8 +52,9 @@ public class AddTest {
 	
 	@Test
 	public void testNegativeNum() {
-		int expected = -3;
-		int actual = addnum.addnumbers("-1,-2");
-		assertEquals("Negatives not allowed ", expected, actual);
+		//int expected = Negatives not allowed;
+		//int actual = addnum.addnumbers("-1,-2");
+		//assertEquals("Negatives not allowed ", expected, actual);
+		assertThrows("Negatives not allowed",Exception.class, ()->addnum.addnumbers("-4,-2"));
 	}
 }
